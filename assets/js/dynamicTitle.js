@@ -20,7 +20,7 @@ window.onload = function () {
   document.addEventListener("visibilitychange", function (e) {
     if (!document.hidden) {
       document.title = pageTitle;
-      favicon.href = "./assets/images/vaibhavbharti.jpeg";
+      favicon.href = "./assets/images/vaibhavicon.jpg";
     }
   });
 
@@ -28,7 +28,7 @@ window.onload = function () {
     blinkEvent = setInterval(() => {
       if (document.title === attentionMessage) {
         document.title = pageTitle;
-        favicon.href = "./assets/images/vaibhavbharti.jpeg";
+        favicon.href = "./assets/images/vaibhavicon.jpg";
       } else {
         document.title = attentionMessage;
         favicon.href = "./assets/images/folded.png";
