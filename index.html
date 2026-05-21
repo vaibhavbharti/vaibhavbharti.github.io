@@ -1,224 +1,767 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<html lang="en">
 <head>
-    <title>Vaibhav Bharti | Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="vaibhav bharti, graphic era university dehradun, moradabad, computer science engineering" />
-    <meta name="description"
-        content="I’m Vaibhav Bharti pursuing my final year of Bachelor of Technology in Computer Science Engineering Specialization in cloud computing in collaboration with IBM from Graphic Era Deemed to be University Dehradun. I am familiar with different programming languages like C++, C, Python, Javascript & PHP. " />
-    <!-- Robot.txt -->
-    <meta name="robots" content="index,follow" />
-    <meta name="Googlebot" content="index,follow" />
-    <meta name="AdsBot-Google" content="index,follow" />
-    <meta property="og:site_name" content="https://vaibhavbharti.github.io/">
-    <meta property="og:title" content="Vaibhav Bharti | Home">
-    <meta property="og:description"
-        content="I’m Vaibhav Bharti pursuing my final year of Bachelor of Technology in Computer Science Engineering Specialization in cloud computing in collaboration with IBM from Graphic Era Deemed to be University Dehradun. I am familiar with different programming languages like C++, C, Python, Javascript & PHP.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vaibhavbharti.github.io/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="https://https://twitter.com/Vaibhav45870628/">
-    <meta name="application-name" content="Vaibhav Bharti | Home" />
-    <meta name="apple-mobile-web-app-title" content="Vaibhav Bharti | Home" />
-    <meta name="summary"
-        content="I’m Vaibhav Bharti pursuing my final year of Bachelor of Technology in Computer Science Engineering Specialization in cloud computing in collaboration with IBM from Graphic Era Deemed to be University Dehradun. I am familiar with different programming languages like C++, C, Python, Javascript & PHP." />
-    <!--For Dark/Light mode Toggle-->
-    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
-    <!--Import Google Icon Font-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="assets/css/preloader.css">
-    <link rel="stylesheet" href="assets/css/home.css"> 
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="assets/images/favicon.png" type="image/x-png"> 
-    <!-- Font awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <script defer src="assets\js\dynamicTitle.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vaibhav Bharti — AI Product Manager, 4x Patent Applicant at Siemens, Industrial AI & LLM Products." />
+  <meta name="keywords" content="Vaibhav Bharti, AI Product Manager, Siemens, Patent, LLM, Industrial AI" />
+  <title>Vaibhav Bharti | AI Product Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #080D18;
+      --surface: #0F1624;
+      --surface2: #161F32;
+      --border: #1E2D4A;
+      --accent: #4F8EF7;
+      --accent2: #7EB3FF;
+      --text: #EFF3FC;
+      --muted: #7A8DAA;
+      --white: #FFFFFF;
+      --gold: #C9A84C;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 4rem;
+      background: rgba(8,13,24,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent2); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 8rem 4rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -200px; right: -200px;
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,142,247,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -100px; left: 10%;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px; width: 100%; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 4rem; align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--accent);
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 6vw, 5.5rem);
+      font-weight: 700; line-height: 1.05;
+      color: var(--white); letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+    }
+    h1 span { color: var(--accent); }
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 520px; margin-bottom: 2.5rem; line-height: 1.8;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .tag {
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.78rem; color: var(--muted);
+      background: var(--surface);
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      padding: 0.75rem 1.8rem;
+      background: var(--accent); color: var(--white);
+      border: none; border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-1px); }
+    .btn-secondary {
+      padding: 0.75rem 1.8rem;
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border); border-radius: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; cursor: pointer;
+      transition: border-color 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .hero-photo {
+      width: 240px; height: 280px;
+      border-radius: 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero-photo-placeholder {
+      font-size: 5rem; opacity: 0.3;
+    }
+
+    /* SECTIONS */
+    section { padding: 6rem 4rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 24px; height: 1px; background: var(--accent);
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--white);
+      margin-bottom: 3rem; line-height: 1.15;
+    }
+
+    /* PATENT HIGHLIGHT */
+    .patent-hero {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      position: relative; overflow: hidden;
+    }
+    .patent-hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    }
+    .award-badge {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.05em;
+      margin-bottom: 1.2rem;
+    }
+    .patent-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .patent-title {
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--white); margin-bottom: 0.8rem;
+    }
+    .patent-desc {
+      font-size: 0.9rem; color: var(--muted);
+      max-width: 600px; line-height: 1.8;
+    }
+    .patent-disclosure {
+      margin-top: 1.2rem;
+      font-size: 0.78rem; color: var(--muted);
+      font-family: 'Outfit', monospace;
+      letter-spacing: 0.05em;
+    }
+    .patents-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .patent-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .patent-card:hover { border-color: var(--accent); }
+    .patent-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--accent); opacity: 0.5;
+      margin-bottom: 0.5rem;
+    }
+    .patent-card-text {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+    }
+
+    /* EXPERIENCE */
+    .exp-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem 2.5rem;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 1rem; align-items: start;
+      transition: border-color 0.2s;
+    }
+    .exp-card:hover { border-color: var(--accent); }
+    .exp-company {
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--white); margin-bottom: 0.2rem;
+    }
+    .exp-role {
+      font-size: 0.9rem; color: var(--accent);
+      font-weight: 500; margin-bottom: 1rem;
+    }
+    .exp-bullets {
+      list-style: none; display: flex;
+      flex-direction: column; gap: 0.5rem;
+    }
+    .exp-bullets li {
+      font-size: 0.88rem; color: var(--muted);
+      padding-left: 1rem; position: relative;
+    }
+    .exp-bullets li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--accent); font-size: 0.75rem;
+    }
+    .exp-date {
+      font-size: 0.78rem; color: var(--muted);
+      white-space: nowrap; letter-spacing: 0.05em;
+      text-align: right;
+    }
+    .exp-badge {
+      display: inline-block;
+      background: rgba(79,142,247,0.1);
+      border: 1px solid rgba(79,142,247,0.2);
+      border-radius: 100px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.72rem; color: var(--accent);
+      font-weight: 500; margin-top: 0.5rem;
+    }
+
+    /* NGO */
+    .ngo-card {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 2.5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: center;
+    }
+    .ngo-label {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .ngo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--white); line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .ngo-desc {
+      font-size: 0.9rem; color: var(--muted);
+      line-height: 1.8; margin-bottom: 1.5rem;
+    }
+    .ngo-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .ngo-stat {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem;
+      text-align: center;
+    }
+    .ngo-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--gold);
+    }
+    .ngo-stat-label {
+      font-size: 0.72rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    /* WRITING */
+    .writing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .writing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+      display: block;
+    }
+    .writing-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .writing-tag {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.8rem;
+    }
+    .writing-title {
+      font-size: 1rem; font-weight: 600;
+      color: var(--white); line-height: 1.4;
+      margin-bottom: 0.6rem;
+    }
+    .writing-desc {
+      font-size: 0.85rem; color: var(--muted);
+      line-height: 1.7;
+    }
+    .writing-date {
+      font-size: 0.75rem; color: var(--muted);
+      margin-top: 1.2rem;
+    }
+    .writing-card-coming {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 12px; padding: 2rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.5rem; text-align: center;
+    }
+    .coming-text {
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .coming-label {
+      font-size: 0.72rem; color: var(--accent);
+      font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem;
+    }
+    .skill-group-label {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.8rem;
+    }
+    .skill-pills {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+    }
+    .skill-pill {
+      padding: 0.25rem 0.7rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.78rem; color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .contact-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 4rem;
+    }
+    .contact-left h2 { margin-bottom: 0.5rem; }
+    .contact-left p { color: var(--muted); font-size: 0.95rem; }
+    .social-links {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    .social-link {
+      padding: 0.6rem 1.2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .social-link:hover { border-color: var(--accent); color: var(--accent2); }
+
+    /* FOOTER */
+    footer {
+      padding: 1.5rem 4rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.78rem; color: var(--muted);
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0; transform: translateY(20px);
+      animation: fadeIn 0.7s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in:nth-child(4) { animation-delay: 0.4s; }
+    .fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .patents-grid { grid-template-columns: 1fr; }
+      .writing-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .ngo-card { grid-template-columns: 1fr; }
+      .contact-inner { flex-direction: column; gap: 2rem; padding: 3rem 1.5rem; }
+      .exp-card { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
-<!-- loader -->
-    <div class="loader-container">
-    <div class="loader">
-        <div class="box box0">
-            <div></div>
-        </div>
-        <div class="box box1">
-            <div></div>
-        </div>
-        <div class="box box2">
-            <div></div>
-        </div>
-        <div class="box box3">
-            <div></div>
-        </div>
-        <div class="box box4">
-            <div></div>
-        </div>
-        <div class="box box5">
-            <div></div>
-        </div>
-        <div class="box box6">
-            <div></div>
-        </div>
-        <div class="box box7">
-            <div></div>
-        </div>
-        <div class="ground">
-            <div></div>
-        </div>
-    </div><a class="dribbble-ref" href="https://dribbble.com/shots/7227469-3D-Boxes-Loader" target="_blank"><img
-            src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" /></a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Vaibhav Bharti</div>
+  <ul class="nav-links">
+    <li><a href="#patents">Patents</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#ngo">NGO</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow fade-in">AI Product Manager</div>
+      <h1 class="fade-in">Vaibhav<br /><span>Bharti</span></h1>
+      <p class="hero-subtitle fade-in">
+        Engineer who builds AI products — and owns them end-to-end.
+        4x Patent Applicant at Siemens · Industrial AI & LLM Products · B.Tech CSE + MBA
+      </p>
+      <div class="hero-tags fade-in">
+        <span class="tag">Industrial AI</span>
+        <span class="tag">LLM Workflows</span>
+        <span class="tag">Anomaly Detection</span>
+        <span class="tag">Real-time Systems</span>
+        <span class="tag">Bengaluru · Open to Remote</span>
+      </div>
+      <div class="hero-ctas fade-in">
+        <a href="https://in.linkedin.com/in/vaibhav-bharti" target="_blank" class="btn-primary">Connect on LinkedIn</a>
+        <a href="mailto:vaibhavbharti4ever@gmail.com" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- Replace src below with your actual photo path after uploading to GitHub -->
+      <img src="assets/images/vaibhavbharti.jpeg" alt="Vaibhav Bharti"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="hero-photo-placeholder" style="display:none;">👤</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PATENTS -->
+<section id="patents">
+  <div class="section-inner">
+    <div class="section-label">Recognition</div>
+    <h2>Patents &amp; Inventions</h2>
+
+    <div class="patent-hero">
+      <div class="award-badge">🏆 IP Samman Rising Inventor Award — Siemens, July 2025</div>
+      <div class="patent-count">4×</div>
+      <div class="patent-title">Patent Applications Filed at Siemens Technology &amp; Services</div>
+      <p class="patent-desc">
+        Recognised for inventing novel AI/ML systems in industrial automation.
+        The flagship invention — an ML-based anomaly detection system using temporal smoothing
+        and hysteresis — reduces false alarms in industrial operations while preserving
+        genuine fault detection accuracy.
+      </p>
+      <div class="patent-disclosure">Disclosure No. 2025E10487 · Siemens Technology &amp; Services Pvt. Ltd.</div>
     </div>
 
-    <!--Dynamic Nav Bar-->
-     
-    <!--Particles effect-->
-    <div id="home">
-        <section class="center">
-            <div id="particles-js"></div>
-        </section>
-    </div>
-<center>
-    <!-- Home Section -->
-    <div class="text col-sm-6">Hi <span class="wave">👋</span>,I'm <span class="header">Vaibhav Bharti</span>
-        <div class="center">
-            <div>
-                <img src="assets/images/vaibhavbharti.jpeg" alt="" class="rounded-circle" height="200" width="200">
-            </div>
-            <br/>
-            <span style="display: inline;" >I am into <span class="animated-text"
-                data-words="Cloud Computing, DevOps, Web Development, Open Source"></span>
-            </span>
-            <div>
-                <div class="social-icons">
-
-                    <a class="socialicon twitter" href="https://twitter.com/Vaibhav45870628" target="_blank" rel="author">
-                        <!-- SVG code for twitter icon -->
-                        <svg class="twitter-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 500 500"
-                            xml:space="preserve">
-                            <!-- bird body -->
-                            <path id="body" fill="#5DA8DC" d="M142.9,364.1c-1.6,1-3,1.7-4,2.3c-3,1.5-7.9,3.8-14.9,6.9c-7,3.1-14.7,5.7-23.1,7.9
-                                               c-8.4,2.2-15.6,3.8-21.8,4.7c-6.2,0.9-12.2,1.5-18.1,1.8s-11.4,0.3-16.7,0c-5.2-0.3-8.5-0.5-9.6-0.6l-1.8-0.2l-0.4-0.1l-0.4-0.1v0.8
-                                               h0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1H33l0.4,0.2l0.4,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l3.6,2.2c2.4,1.5,4.5,2.6,6.4,3.6
-                                               s6.6,3.3,14.1,7.1c7.6,3.7,16.6,7.4,27.2,11.1s18.6,6.2,24,7.4c5.4,1.3,12.8,2.6,22.2,3.9s14.9,2.1,16.3,2.2
-                                               c1.5,0.1,3.3,0.3,5.5,0.4l3.3,0.2v0.2h25.6v-0.2l14-1.3c9.3-0.9,17.6-2.1,25-3.3c7.3-1.3,14.9-3.1,22.8-5.5
-                                               c7.9-2.4,15.3-4.9,22.4-7.7c7.1-2.8,13.7-5.7,19.7-9c6.1-3.2,11.3-6,15.6-8.5c4.3-2.5,9.1-5.6,14.2-9.3c5.2-3.7,10-7.5,14.6-11.2
-                                               s7.1-5.9,7.7-6.4c0.6-0.6,4-4,10.2-10.2c6.2-6.3,11.3-11.9,15.4-16.8c4-5,8-10.3,12-15.9c3.9-5.6,8.3-12.5,13-20.6
-                                               s9.2-17.3,13.5-27.5s8-20.7,11-31.5c3-10.7,5.2-20.4,6.7-28.9s2.4-16.5,3-23.8c0.5-7.3,0.8-13.9,0.9-19.7s2.5-10.8,7.4-14.8
-                                               s9.9-8.5,15-13.7c5.1-5.1,7.9-8,8.3-8.7c0.5-0.7,0.9-1.1,1.1-1.2c0.3-0.1,2.1-2.3,5.3-6.7c3.3-4.4,5-6.6,5-6.7l0.1-0.1l0.2-0.4
-                                               l0.2-0.4l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.2-0.1l0.2-0.1V115l-1,0.3l-0.8,0.1
-                                               l-0.4,0.2l-0.4,0.2l-0.4,0.2l-0.4,0.2l-0.6,0.2l-1.2,0.4l-10.6,3.6c-6.7,2.2-13.7,4.1-21,5.7l-11,2.4h-1.9l0.1-0.1l0.1-0.1l0.1-0.1
-                                               l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.4-0.2l0.4-0.2l0.1-0.1l0.1-0.1l0.1-0.1l0.1-0.1l0.4-0.2l0.4-0.2l1.9-1.3
-                                               c1.3-0.9,2.4-1.8,3.3-2.8s2.8-2.7,5.6-5.1c2.8-2.4,6-6,9.5-10.7s6.5-9.4,8.8-14s3.6-7.2,3.7-7.9c0.1-0.6,0.3-1.2,0.4-1.6l0.2-0.6
-                                               l0.2-0.4l0.2-0.4l0.2-0.6l0.2-0.6l0.1-0.6l0.1-0.6l-0.4,0.1l-0.4,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.4,0.2l-0.4,0.2
-                                               l-0.4,0.2l-0.4,0.2l-0.1,0.1c-0.1,0.1-0.8,0.4-1.9,1.2c-1.2,0.7-4.7,2.4-10.5,5s-11.6,5-17.5,7.1s-11.4,3.7-16.5,4.9
-                                               s-8.8,0.5-11.3-1.9c-2.4-2.4-5.2-4.7-8.3-6.9c-3.1-2.2-6.5-4.3-10.4-6.4c-3.8-2.1-7.7-3.9-11.8-5.5c-4-1.6-8.6-2.9-13.5-3.8
-                                               l-7.4-1.5h-20.5v0.1c0,0.1-1.7,0.4-5.1,0.9s-7.6,1.6-12.6,3.3c-5,1.7-10.4,4.2-16.3,7.4c-5.9,3.3-11.1,7-15.7,11.2
-                                               s-8.3,8.3-11.2,12.2c-2.9,3.9-5.2,7.4-7,10.5C221.5,163.3,231.3,307,142.9,364.1z" />
-                        
-                            <!-- wing1 -->
-                            <path id="wing1" fill="#5DA8DC" d="M233.2,181.5c-5-0.5-12.4-1.7-22.2-3.6c-9.8-1.8-16.8-3.3-20.8-4.5s-11.1-3.7-21.2-7.4
-                                               c-10.1-3.8-19.5-8-28.3-12.8c-8.8-4.7-16.8-9.5-24-14.4s-13.1-9.1-17.5-12.8c-4.5-3.7-7.1-6-7.9-7s-1.5-1.6-1.9-1.8
-                                               c-0.5-0.2-3.2-2.7-8-7.6s-9.1-9.2-12.6-13.2l-5.3-5.9l-0.1-0.1l-0.1-0.1L63.1,90l-0.2-0.4l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1
-                                               l-0.1-0.1L62.3,89l-0.1-0.1l0,0.1l-0.1,0.1L62,89.2l0,0.1l-0.1,0.1L61.7,90l-0.2,0.6L57.9,98c-2.2,5-3.9,9.7-5.1,14.1
-                                               c-1.2,4.5-1.9,8.5-2.4,12c-0.4,3.5-0.5,7.8-0.4,12.8s0.7,10,1.8,15.1c1,5.1,2.6,10.2,4.6,15.2c2.1,5.1,4,9.2,5.8,12.5
-                                               c1.8,3.2,3.9,6.4,6.3,9.2c2.4,2.9,4.7,5.6,7.1,8.3s4.6,4.7,6.7,6.4c2.2,1.6,3.3,2.5,3.4,2.5l0.1,0.1l0.4,0.2l0.4,0.2l0.1,0.1
-                                               l0.1,0.1l0.1,0.1L87,207l0.4,0.2l0.4,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1H85l-1.8-0.2
-                                               c-1.2-0.1-4.8-0.9-10.8-2.2s-11.1-2.9-15.1-4.7l-6.1-2.8l-0.4-0.2l-0.4-0.2l-0.4-0.2l-0.4-0.2l-0.4-0.1l-0.4-0.1l0.7,8.3
-                                               c0.4,5.5,1.4,11,2.8,16.3c1.5,5.4,3.6,11,6.5,16.9s6.2,11.1,9.8,15.5c3.7,4.5,7,8.1,10.1,11c3.1,2.8,6.3,5.4,9.8,7.8
-                                               c3.4,2.4,8,4.8,13.8,7.3s9.3,3.9,10.6,4.3c1.3,0.4,2.2,0.6,2.8,0.8l0.8,0.2l0.8,0.2l0.8,0.2l0.8,0.2l0.8,0.2l-0.1,0.1l-0.1,0.1
-                                               l-0.1,0.1l-0.1,0.1l-1,0.2l-1,0.2l-0.8,0.2c-0.5,0.1-1.9,0.4-4.3,0.8s-6.6,0.6-12.8,0.8c-6.2,0.1-10.7,0-13.5-0.4l-4.3-0.6L81,288
-                                               l-0.6-0.1l0.1,0.4l0.1,0.4l0.2,0.6l0.2,0.6l3.2,7.2c2.2,4.8,4.4,9,6.7,12.7c2.3,3.7,5.1,7.2,8.3,10.7c3.2,3.5,5.8,6.2,7.9,8
-                                               c2.1,1.9,5.3,4.3,9.9,7.2c4.6,2.9,9.3,5.4,14.1,7.4c4.9,2.1,9.4,3.7,13.5,4.7c4.2,1,7.3,1.6,9.2,1.8c1.9,0.1,4,0.3,6.1,0.4l3.1,0.2
-                                               c117.9-117.9,82.9-167.7,82.9-167.7l-2.8-0.1C241.6,182.3,238.2,181.9,233.2,181.5z" />
-                            <!-- wing2 -->
-                            <path id="wing2" fill="#5DA8DC" d="M233.2,181.5c-5-0.5-12.4-1.7-22.2-3.6c-9.8-1.8-16.8-3.3-20.8-4.5s-11.1-3.7-21.2-7.4
-                                               c-10.1-3.8-19.5-8-28.3-12.8c-8.8-4.7-16.8-9.5-24-14.4s-13.1-9.1-17.5-12.8c-4.5-3.7-7.1-6-7.9-7s-1.5-1.6-1.9-1.8
-                                               c-0.5-0.2-3.2-2.7-8-7.6s-9.1-9.2-12.6-13.2l-5.3-5.9l-0.1-0.1l-0.1-0.1L63.1,90l-0.2-0.4l-0.1-0.1l-0.1-0.1l-0.1-0.1l-0.1-0.1
-                                               l-0.1-0.1L62.3,89l-0.1-0.1l0,0.1l-0.1,0.1L62,89.2l0,0.1l-0.1,0.1L61.7,90l-0.2,0.6L57.9,98c-2.2,5-3.9,9.7-5.1,14.1
-                                               c-1.2,4.5-1.9,8.5-2.4,12c-0.4,3.5-0.5,7.8-0.4,12.8s0.7,10,1.8,15.1c1,5.1,2.6,10.2,4.6,15.2c2.1,5.1,4,9.2,5.8,12.5
-                                               c1.8,3.2,3.9,6.4,6.3,9.2c2.4,2.9,4.7,5.6,7.1,8.3s4.6,4.7,6.7,6.4c2.2,1.6,3.3,2.5,3.4,2.5l0.1,0.1l0.4,0.2l0.4,0.2l0.1,0.1
-                                               l0.1,0.1l0.1,0.1L87,207l0.4,0.2l0.4,0.2l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1H85l-1.8-0.2
-                                               c-1.2-0.1-4.8-0.9-10.8-2.2s-11.1-2.9-15.1-4.7l-6.1-2.8l-0.4-0.2l-0.4-0.2l-0.4-0.2l-0.4-0.2l-0.4-0.1l-0.4-0.1l0.7,8.3
-                                               c0.4,5.5,1.4,11,2.8,16.3c1.5,5.4,3.6,11,6.5,16.9s6.2,11.1,9.8,15.5c3.7,4.5,7,8.1,10.1,11c3.1,2.8,6.3,5.4,9.8,7.8
-                                               c3.4,2.4,8,4.8,13.8,7.3s9.3,3.9,10.6,4.3c1.3,0.4,2.2,0.6,2.8,0.8l0.8,0.2l0.8,0.2l0.8,0.2l0.8,0.2l0.8,0.2l-0.1,0.1l-0.1,0.1
-                                               l-0.1,0.1l-0.1,0.1l-1,0.2l-1,0.2l-0.8,0.2c-0.5,0.1-1.9,0.4-4.3,0.8s-6.6,0.6-12.8,0.8c-6.2,0.1-10.7,0-13.5-0.4l-4.3-0.6L81,288
-                                               l-0.6-0.1l0.1,0.4l0.1,0.4l0.2,0.6l0.2,0.6l3.2,7.2c2.2,4.8,4.4,9,6.7,12.7c2.3,3.7,5.1,7.2,8.3,10.7c3.2,3.5,5.8,6.2,7.9,8
-                                               c2.1,1.9,5.3,4.3,9.9,7.2c4.6,2.9,9.3,5.4,14.1,7.4c4.9,2.1,9.4,3.7,13.5,4.7c4.2,1,7.3,1.6,9.2,1.8c1.9,0.1,4,0.3,6.1,0.4l3.1,0.2
-                                               c117.9-117.9,82.9-167.7,82.9-167.7l-2.8-0.1C241.6,182.3,238.2,181.9,233.2,181.5z" />
-                        </svg>
-                    </a>
-
-                    
-
-                    <a class="socialicon linkedin" href="https://www.linkedin.com/in/vaibhav-bharti/" target="_blank" rel="author">
-                        <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
-                            stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-
-                    <a class="socialicon medium" href="https://medium.com/@vaibhavbharti" target="_blank" rel="author">
-                        <i class="fab fa-medium-m"></i>
-                    </a>
-
-                    <a class="socialicon instagram" href="https://www.instagram.com/vaibhavgurer/" target="_blank" rel="author">
-                        <!-- svg code for instagram icon -->
-                        <svg class="instagram-icon" x="0px" y="0px" viewBox="0 0 202.5 202.5" style="enable-background:new 0 0 202.5 202.5;">
-                            <circle id="littleCircle" class="st0" cx="101" cy="101.5" r="18.9" />
-                            <circle id="shutter" class="st0" cx="101" cy="101.5" r="8" />
-                            <circle id="lens" class="st0" cx="125.5" cy="78.6" r="2.9" />
-                            <path id="camera" class="st0" d="M79,60.5h44c10.5,0,19,8.5,19,19v44c0,10.5-8.5,19-19,19H79c-10.5,0-19-8.5-19-19v-44
-                                                                                                    C60,69,68.5,60.5,79,60.5z" />
-                        </svg>
-                    </a>
-
-                    <a class="socialicon github" href="https://github.com/vaibhavbharti" target="_blank" rel="author">
-                        <!-- SVG code for Github icon -->
-                        <svg class="github-icon" width="45px" height="45px" viewBox="0 0 300 300">
-                            <!-- body -->
-                            <path id="body" d="M112.5,234.4v43.1c24.5,7.5,50.5,7.5,75,0V225c-0.4-11.1-4.9-21.6-12.7-29.6c30-3.4,59.5-23.5,59.5-64.1
-                                                        c0.9-13.9-3.3-27.7-11.8-38.7c4.1-11.6,3.7-24.4-1.3-35.7c0,0-11.2-3.7-37.5,13.8c-22.1-6.1-45.3-6.1-67.4,0
-                                                        C90.6,53.3,78.9,56.8,78.9,56.8c-5,11.3-5.4,24.1-1.3,35.7c-8.5,11.1-12.7,24.8-11.9,38.7c0.2,33.8,26.4,61.8,60.2,64.1
-                                                        c-5,4.7-8.1,11.1-8.6,18" />
-                             <!-- arm                             -->
-                            <path id="arm" d="M125.2,213.4c-13.9,7.8-31.5,2.8-39.3-11.2c-4.3-7.7-12-12.8-20.7-13.8c-11.2,0-4.6,6.4,0,9.4
-                                                        c6,5.1,10.8,11.5,13.8,18.8c2.9,7.4,7.7,24.1,41.5,17.8" />
-                        </svg>
-                    </a>
-
-                </div>
-            </div>
+    <div class="patents-grid">
+      <div class="patent-card">
+        <div class="patent-card-num">01</div>
+        <div class="patent-card-text">
+          <strong style="color:var(--text);">ML-Based Anomaly Detection</strong><br />
+          Temporal smoothing &amp; hysteresis for enhanced alarm management in industrial automation.
+          Reduces false alarms, improves operational efficiency and operator UX.
         </div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-card-num">02</div>
+        <div class="patent-card-text">
+          <strong style="color:var(--text);">Patent Application #2</strong><br />
+          Industrial AI/ML domain · Siemens Technology &amp; Services.<br />
+          <em style="font-size:0.78rem;">Details available on request.</em>
+        </div>
+      </div>
+      <div class="patent-card">
+        <div class="patent-card-num">03 &amp; 04</div>
+        <div class="patent-card-text">
+          <strong style="color:var(--text);">Patent Applications #3 &amp; #4</strong><br />
+          Industrial automation &amp; AI/ML domains · Siemens Technology &amp; Services.<br />
+          <em style="font-size:0.78rem;">Details available on request.</em>
+        </div>
+      </div>
     </div>
-</center>
-    
-    
-    <!-- Dynamic footer section -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-                                    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167979537-2"></script>
-    <!-- Fetching our Google Tag Manager -->
+  </div>
+</section>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="assets/js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-    <script src="assets/js/particle.js"></script>
+<hr class="divider" />
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Work</div>
+    <h2>Experience</h2>
+    <div class="exp-grid">
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-company">Siemens Technology &amp; Services Pvt. Ltd.</div>
+          <div class="exp-role">Software Development Engineer → AI Product Manager</div>
+          <ul class="exp-bullets">
+            <li>Owned product roadmap and backlog for Notifier Rules Engine — AI-powered industrial alerting platform processing 3M+ events/day</li>
+            <li>Invented and filed 4 patents at Siemens including ML-based anomaly detection system. IP Samman Rising Inventor Award (2025)</li>
+            <li>Wrote PRDs and technical specs for AI/ML features — translating business problems into engineering deliverables</li>
+            <li>Applied LLM workflows, RAG architecture, and agentic system design to product architecture decisions</li>
+            <li>Built Kafka/MQTT pipelines: 5M+ messages/day · AWS · &lt;0.1% drop rate</li>
+            <li>Reduced API latency 800ms → 220ms · Throughput 2.1× · Auth failures −60%</li>
+          </ul>
+          <span class="exp-badge">Bengaluru · Hybrid</span>
+        </div>
+        <div class="exp-date">Apr 2023 – Present<br /><span style="color:var(--accent);font-size:0.9rem;">3+ yrs</span></div>
+      </div>
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-company">STL Digital (Sterlite Technologies Ltd.)</div>
+          <div class="exp-role">Product Engineer</div>
+          <ul class="exp-bullets">
+            <li>Shipped 12+ REST APIs powering financial data analytics platform — cut data freshness from hours to ~5 minutes via Kafka</li>
+            <li>Reduced dashboard load latency ~45% — directly improving analyst productivity and retention</li>
+            <li>Built reusable product components adopted across 3+ modules</li>
+          </ul>
+          <span class="exp-badge">Bengaluru · Hybrid</span>
+        </div>
+        <div class="exp-date">Aug 2022 – Mar 2023<br /><span style="color:var(--muted);font-size:0.9rem;">8 mos</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- NGO -->
+<section id="ngo">
+  <div class="section-inner">
+    <div class="section-label">Social Impact</div>
+    <h2>Beyond Work</h2>
+    <div class="ngo-card">
+      <div>
+        <div class="ngo-label">Founder &amp; Trustee</div>
+        <div class="ngo-name">Premwati Fakirchand Memorial Educational &amp; Charitable Trust</div>
+        <p class="ngo-desc">
+          Founded PFMECT from zero in early 2026 — an NGO dedicated to making medical
+          education affordable and accessible in India. Independently secured all legal
+          registrations, built digital infrastructure, and established funding strategy
+          within 3 months. A true 0→1 execution.
+        </p>
+        <div class="hero-tags" style="margin-bottom:0;">
+          <span class="tag">12A Registered</span>
+          <span class="tag">80G Certified</span>
+          <span class="tag">NGO Darpan</span>
+          <span class="tag">GuideStar</span>
+        </div>
+      </div>
+      <div class="ngo-stats">
+        <div class="ngo-stat">
+          <div class="ngo-stat-num">0→1</div>
+          <div class="ngo-stat-label">Built from scratch</div>
+        </div>
+        <div class="ngo-stat">
+          <div class="ngo-stat-num">3</div>
+          <div class="ngo-stat-label">Months to launch</div>
+        </div>
+        <div class="ngo-stat">
+          <div class="ngo-stat-num">5</div>
+          <div class="ngo-stat-label">Registrations secured</div>
+        </div>
+        <div class="ngo-stat">
+          <div class="ngo-stat-num">∞</div>
+          <div class="ngo-stat-label">Mission driven</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="section-inner">
+    <div class="section-label">Thinking</div>
+    <h2>Writing</h2>
+    <div class="writing-grid">
+
+      <a class="writing-card" href="https://medium.com/@vaibhavbharti/introducing-threads-the-game-changer-in-public-conversations-42d98bba57c5" target="_blank">
+        <div class="writing-tag">Product Analysis</div>
+        <div class="writing-title">Introducing Threads: The Game-Changer in Public Conversations</div>
+        <p class="writing-desc">A breakdown of Meta's Threads launch — examining product strategy, competitive dynamics, and what it means for the future of public social platforms.</p>
+        <div class="writing-date">July 2023 · Medium</div>
+      </a>
+
+      <div class="writing-card-coming">
+        <div class="coming-label">Coming Soon</div>
+        <div class="coming-text">
+          <strong style="color:var(--text);">PM Case Study: ML Anomaly Detection</strong><br />
+          From false alarms to filed patent — a product manager's perspective on identifying the problem, designing the ML solution, and shipping it to production.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- SKILLS -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Capabilities</div>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">AI / Product</div>
+        <div class="skill-pills">
+          <span class="skill-pill">LLM Workflows</span>
+          <span class="skill-pill">RAG</span>
+          <span class="skill-pill">Agentic Systems</span>
+          <span class="skill-pill">PRD Writing</span>
+          <span class="skill-pill">Backlog Management</span>
+          <span class="skill-pill">RICE Prioritization</span>
+          <span class="skill-pill">Agile / Scrum</span>
+          <span class="skill-pill">KPI Tracking</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Data &amp; Cloud</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Apache Kafka</span>
+          <span class="skill-pill">MQTT</span>
+          <span class="skill-pill">AWS</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">MongoDB</span>
+          <span class="skill-pill">Redis</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Kubernetes</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Engineering</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Java / Spring Boot</span>
+          <span class="skill-pill">Microservices</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">OAuth2 / JWT</span>
+          <span class="skill-pill">OpenAPI / Swagger</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Education</div>
+        <div class="skill-pills">
+          <span class="skill-pill">MBA — AKTU Lucknow</span>
+          <span class="skill-pill">B.Tech CSE — Graphic Era</span>
+          <span class="skill-pill">IBM AI Practitioner</span>
+          <span class="skill-pill">Google Analytics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <h2 style="margin-bottom:0.5rem;">Let's talk.</h2>
+      <p>Open to AI PM and Technical PM roles — India &amp; Remote.</p>
+      <p style="margin-top:0.3rem;"><a href="mailto:vaibhavbharti4ever@gmail.com" style="color:var(--accent);text-decoration:none;">vaibhavbharti4ever@gmail.com</a> · +91 7900809525</p>
+    </div>
+    <div class="social-links">
+      <a href="https://in.linkedin.com/in/vaibhav-bharti" target="_blank" class="social-link">LinkedIn</a>
+      <a href="https://github.com/vaibhavbharti" target="_blank" class="social-link">GitHub</a>
+      <a href="https://medium.com/@vaibhavbharti" target="_blank" class="social-link">Medium</a>
+      <a href="mailto:vaibhavbharti4ever@gmail.com" class="social-link btn-primary" style="border-radius:6px;">Email Me</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Vaibhav Bharti · Built with purpose · Bengaluru, India</p>
+</footer>
 
 </body>
-
 </html>
